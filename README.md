@@ -61,10 +61,7 @@ We welcome contributions! Please feel free to fork this repository, create featu
 
 ---
 
-## **License**  
-This project is licensed under the [MIT License](LICENSE).  
 
----
 
 ## **Contact Us**  
 For queries or suggestions, feel free to contact us:  
