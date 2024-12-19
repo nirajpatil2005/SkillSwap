@@ -1,0 +1,339 @@
+/* General styling */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #e9e9e9;
+}
+
+
+/* Header Styles */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px;
+  background-color: #4588d1;
+  color: white;
+}
+
+header .logo img {
+  width: 140px;
+  margin-left: 20px;
+}
+
+
+/* Navigation Styles */
+.nav {
+  margin: 20px 0;
+}
+
+.tab-button {
+  background-color: #4588d1;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  margin-right: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.tab-button:hover {
+  background-color: #4588d1;
+}
+
+/* Section Styles */
+.section {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+/* Modal Styles */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; 
+  z-index: 1; 
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100%; 
+  overflow: auto; 
+  background-color: rgba(0,0,0,0.4); 
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto; 
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%; 
+  max-width: 500px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Close Button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Button Styles */
+button {
+  background-color: #4588d1;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #4588d1;
+}
+
+/* Input and Textarea Styles */
+input[type="text"],
+input[type="email"],
+input[type="date"],
+input[type="number"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* Skills and Projects Section */
+#view-skills, 
+#view-projects {
+  padding: 10px;
+  background-color: #f1f1f1;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.hidden {
+  display: none;
+}
+footer {
+  background-color: #4588d1;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+footer p {
+  margin: 5px;
+}
+
+footer a {
+  color: white;
+  text-decoration: underline;
+}
+
+.success-message {
+  color: #4588d1;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+/* General styling */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #e9e9e9;
+}
+
+.header {
+  background-color: #4588d1;
+  color: white;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.Profile {
+  background-color: #4588d1;
+  color: #fff;
+  padding: 10px 20px;
+  border: 2px solid #f9f9f9ea;
+  margin-right: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1em;
+}
+
+.Profile:hover {
+  background-color: #f1f1f1ee; 
+  color: #4588d1;
+  border: 2px solid #ac1f1f00;
+}
+
+.logo {
+  height: 40px;
+}
+
+.nav {
+  margin-top: 18px;
+  display: flex;
+  justify-content: center;
+  background-color: #e9e9e9;
+  padding: 10px;
+}
+
+.tab-button {
+  background-color: #4c90da;
+  color: white;
+  border: 1px solid #4588d1;
+  padding: 10px 20px;
+  margin: 0 5px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.tab-button:hover {
+  background-color: #f1f1f1;
+  color: #4588d1;
+  border: 1px solid #4588d1;
+}
+
+.section {
+  padding: 20px;
+  display: none; 
+  background-color: white;
+  margin: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.section:not(.hidden) {
+  display: block; 
+}
+
+/* Modal Styling */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.5);
+  padding-top: 60px;
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 5% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+.edit-details-btn{
+  color: #ffffff;
+  background-color: #4588d1;
+  padding: 10px 20px;
+  border-radius: 8px;
+  border: 1px solid #4588d1;
+
+}
+.edit-details-btn:hover {
+  background-color: #ffffff;
+  color: #4588d1;
+  border: 1px solid #4588d1;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+
+/* Button Styling */
+button.edit-btn, button.save-btn {
+  margin-top: 20px;
+  padding: 10px 15px;
+  background-color: #4c90da;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button.edit-btn:hover, button.save-btn:hover {
+  background-color: #f1f1f1;
+  color: #4588d1;
+  border: 1px solid #4588d1;
+}
+
+/* Improved input field styling */
+form label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+input, select, textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 5px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+textarea {
+  resize: vertical;
+}
+
+/* Footer Styling */
+footer {
+  background-color: #4588d1;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+footer p {
+  margin: 5px;
+}
+
+footer a {
+  color: white;
+  text-decoration: underline;
+}
+
+.success-message {
+  color: #4588d1;
+  font-weight: bold;
+  margin-bottom: 20px;
+}

@@ -1,0 +1,227 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('image.png');
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    color: #333;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px;
+    background-color: #4588d1;
+    color: white;
+}
+
+header .logo img {
+    width: 140px;
+    margin-left: 20px;
+}
+.Profile {
+    background-color: #4588d1;
+    color: #fff;
+    padding: 10px 20px;
+    border: 2px solid #f9f9f9ea;
+    margin-right: 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+}
+.Profile:hover {
+    background-color: #f1f1f1ee; /* Blue */
+    color: #4588d1;
+    border: 2px solid #ac1f1f00;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 25px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Main Section */
+.teammate-section {
+    padding: 60px 30px;
+}
+
+.teammate-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-bottom:  325px;
+}
+
+h2 {
+    color: #4588d1;
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 32px;
+}
+
+/* Skill Selection */
+.skill-selection {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.skill-btn {
+    padding: 12px 25px;
+    background-color: #4588d1;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 16px;
+    margin: 10px 15px;
+    transition: background-color 0.3s;
+}
+
+.skill-btn:hover {
+    background-color: #004d99;
+}
+
+/* Teammate List */
+.teammate-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+}
+
+.teammate-card {
+    flex: 1 1 calc(30px - 20);
+    background-color: rgb(247, 247, 247);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+.teammate-card h4 {
+    margin-top: 0;
+    color: #4588d1;
+}
+
+.teammate-card p {
+    margin: 10px 0;
+    color: #555;
+}
+
+.teammate-card .btn-group {
+    margin-top: 20px;
+}
+
+.teammate-card button {
+    padding: 10px 20px;
+    background-color: #4588d1;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 14px;
+    margin: 0 5px;
+    transition: background-color 0.3s;
+}
+
+.teammate-card button:hover {
+    background-color: #004d99;
+}
+
+/* Modal Styles */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 100; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0,0,0,0.5); /* Black w/ opacity */
+}
+
+.modal-content {
+    background-color: white;
+    margin: 10% auto;
+    padding: 30px;
+    border-radius: 12px;
+    width: 50%;
+    position: relative;
+}
+
+.close-btn {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    cursor: pointer;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+    color: black;
+    text-decoration: none;
+}
+
+#profileDetails h3 {
+    color: #4588d1;
+    margin-top: 0;
+}
+
+#profileDetails p {
+    color: #555;
+    margin: 10px 0;
+}
+
+#profileDetails ul {
+    list-style: none;
+    padding: 0;
+}
+
+#profileDetails ul li {
+    background-color: #f0f2f5;
+    padding: 10px;
+    margin-bottom: 5px;
+    border-radius: 8px;
+}
+
+/* Footer */
+footer {
+    background-color: #4588d1;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+footer p {
+    margin: 5px;
+}
+
+footer a {
+    color: white;
+    text-decoration: underline;
+}

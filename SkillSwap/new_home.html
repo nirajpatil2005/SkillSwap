@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkillSwap Dashboard</title>
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    
+    <!-- Header Section -->
+    <header>
+        <div class="logo">
+            <img src="logo2.png" alt="SkillSwap Logo">
+        </div>
+        <nav>
+            <ul>
+                <a href="notifications.html" id="notificationBtn">
+                    <button class="notification">
+                        <i class="fas fa-bell"></i>
+                    </button>
+                </a>
+            <a href="#" id="profileModalBtn">
+            <button class="Profile">Profile</button>
+            </a>
+            <a href="open.html">
+            <button class="Profile">My Team</button>
+            </a>
+            <a href="open.html">
+                <button class="Profile">Logout</button>
+                </a>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Section -->
+    <main>
+        <section class="about-section">
+            <div class="about-box">
+                <h2>Welcome to SkillSwap</h2>
+                <p>Your go-to platform for connecting talented students with dynamic teams for competitions and hackathons! Our mission is to empower students by making it easy for them to find the right teammates and collaborate on exciting projects.</p>
+                <a href="about.html" class="learn-more-btn">Learn More</a>
+            </div>
+        </section>
+
+        <!-- Feature Cards -->
+        <section class="feature-cards">
+            <div class="card">
+                <h3>Find a Teammate</h3>
+                <p>Search for skilled teammates and build a strong team to work on your next big idea.</p>
+                <a href="find-teammate.html" class="card-btn">Explore</a>
+            </div>
+            <div class="card">
+                <h3>Browse Projects</h3>
+                <p>Looking for a team to join? Browse projects and join a team that matches your skills.</p>
+                <a href="browse-projects.html" class="card-btn">Join Now</a>
+            </div>
+            <div class="card">
+                <h3>Post a Project</h3>
+                <p>Got a project idea? Post it here and find the best teammates to make it a reality.</p>
+                <a href="post-project.html" class="card-btn">Post Project</a>
+            </div>
+            <div class="card">
+                <h3>Hackathon Updates</h3>
+                <p>Stay up-to-date with the latest hackathons, challenges, and competitions in your area.</p>
+                <a href="hackathon-updates.html" class="card-btn">See Updates</a>
+            </div>
+        </section>
+
+        <!-- Useful Section -->
+        <section class="useful-container">
+            <h2>Why SkillSwap?</h2>
+            <p><strong>> Easy-to-Use Interface: </strong>  User-friendly interface ensures that you can navigate through the platform effortlessly, whether you’re on a desktop or mobile device.</p>
+            <p><strong>> Comprehensive Profiles: </strong>  Create detailed profiles to showcase your skills, experience, and interests. Our platform allows you to present yourself effectively to potential team leaders and collaborators.</p>
+            <p><strong>> Community and Support: </strong>  Join a vibrant community of students who are passionate about technology and innovation. Our support team is here to assist you every step of the way.</p>
+
+        </section>
+    </main>    
+    <!-- Side Modal for Profile (Add this before the closing body tag) -->
+    <div id="profileModal" class="profile-modal">
+        <div class="profile-modal-content">
+            <span class="close">&times;</span>
+            <h2>Your Profile</h2>
+            <div class="profile-info">
+                <p><strong>Name:</strong> John Doe</p>
+                <p><strong>Email:</strong> johndoe@gmail.com</p>
+                <p><strong>Skills:</strong> Web Development, Python</p>
+                <button id="editProfileBtn">Edit Profile</button>
+            </div>
+            
+            <!-- Edit Profile Form (Initially Hidden) -->
+            <form id="editProfileForm" style="display: none;">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" value="John Doe">
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" value="johndoe@gmail.com">
+                
+                <label for="skills">Skills:</label>
+                <input type="text" id="skills" name="skills" value="Web Development, Python">
+
+                <label for="bio">Short Bio:</label>
+                <textarea id="bio" name="bio" rows="4" placeholder="Tell us something about yourself"></textarea><br>
+
+            <!-- File upload for CV -->
+            <label for="cvUpload">Upload CV:</label>
+            <input type="file" id="cvUpload" name="cvUpload" accept=".pdf,.doc,.docx">
+
+            <!-- File upload for Projects -->
+            <label for="projectUpload">Upload Projects:</label>
+            <input type="file" id="projectUpload" name="projectUpload" accept=".zip,.rar,.7z"><br><br>
+
+                
+                <button type="submit">Save Changes</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>Contact us at: <a href="mailto:team.skillswap@gmail.com">team.skillswap@gmail.com</a></p>
+        <p>Created by: Atharva Jain | Niraj Patil</p>
+    </footer>
+
+    <!-- Link to the JS file -->
+    <script src="modal.js"></script>
+
+</body>
+</html>

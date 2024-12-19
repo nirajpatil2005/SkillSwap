@@ -1,0 +1,177 @@
+/* General Styles */
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-image: url('image.png');
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  color: #333;
+}
+
+/* Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: #4588d1;
+  color: white;
+}
+
+header .logo img {
+  margin-left: 20px;
+  width: 140px;
+}
+.Profile {
+  background-color: #4588d1;
+  color: #fff;
+  padding: 10px 20px;
+  border: 2px solid #f9f9f9ea;
+  margin-right: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1em;
+}
+.Profile:hover {
+  background-color: #f1f1f1ee; /* Blue */
+color: #4588d1;
+border: 2px solid #ac1f1f00;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+nav ul li {
+  margin-left: 30px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+/* Project Section */
+.project-section {
+  padding: 60px 20px;
+  background-color: rgba(219, 217, 209, 0); /* Slight beige overlay */
+}
+
+.project-container {
+  max-width: 550px;
+  margin: 0 auto;
+  background-color: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.project-header h2 {
+  color: #4588d1;
+  margin-bottom: 10px;
+}
+
+.project-header p {
+  color: #555;
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+form label {
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 8px;
+  display: block;
+}
+
+form input, form textarea {
+  width: 95%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+input, textarea, select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+button[type="submit"] {
+  display: inline-block;
+  padding: 12px 20px;
+  background-color: #4588d1;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+  background-color: #193F68;
+}
+
+/* Team Option Section */
+.team-option {
+  text-align: center;
+  margin-top: 30px;
+  padding: 20px;
+  background-color: #f4f4f4;
+  border: 2px dashed #4588d1;
+  border-radius: 12px;
+}
+
+.team-option h3 {
+  color: #4588d1;
+}
+
+.team-option p {
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.form-team-btn {
+  padding: 12px 20px;
+  background-color: #4588d1;
+  color: white;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.form-team-btn:hover {
+  background-color: #193F68;
+}
+
+/* Hide the team option initially */
+.hidden {
+  display: none;
+}
+
+/* Footer */
+footer {
+  background-color: #4588d1;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+footer p {
+  margin: 5px;
+}
+
+footer a {
+  color: white;
+  text-decoration: underline;
+}

@@ -1,0 +1,174 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('image.png');
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    color: #333;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px;
+    background-color: #4588d1;
+    color: white;
+}
+
+header .logo img {
+    margin-left: 20px;
+    width: 150px;
+}
+.Profile {
+    background-color: #4588d1;
+    color: #fff;
+    padding: 10px 20px;
+    border: 2px solid #f9f9f9ea;
+    margin-right: 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+}
+.Profile:hover {
+    background-color: #f1f1f1ee; /* Blue */
+color: #4588d1;
+border: 2px solid #ac1f1f00;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 30px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+/* Main Section */
+.team-form-section {
+    padding: 150px;
+    background-color: rgba(255, 255, 255, 0);
+}
+
+.team-form-container {
+    margin-top: 1000px;
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    color: #4588d1;
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+.form-group input,
+.form-group select {
+    width: 95%;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+
+.form-group button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #4588d1;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.form-group button:hover {
+    background-color: #357abd;
+}
+
+/* Team List */
+ul#teamList {
+    list-style: none;
+    padding: 0;
+    margin-top: 10px;
+}
+
+ul#teamList li {
+    padding: 10px;
+    background-color: #eaeaea;
+    margin-bottom: 5px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+ul#teamList li button {
+    background-color: #d9534f;
+    border: none;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+ul#teamList li button:hover {
+    background-color: #c9302c;
+}
+
+.submit-btn {
+    display: block;
+    width: 20%;
+    padding: 10px;
+    margin-left: 220px;
+    background-color: #4588d1;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.submit-btn:hover {
+    background-color: #357abd;
+}
+
+/* Footer */
+footer {
+    background-color: #4588d1;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+footer p {
+    margin: 5px;
+}
+
+footer a {
+    color: white;
+    text-decoration: underline;
+}
+
