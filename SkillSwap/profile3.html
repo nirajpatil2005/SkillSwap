@@ -1,0 +1,151 @@
+<?php
+session_start();
+include('db_connect.php');
+
+if (!isset($_SESSION['user_id'])) {
+    header("Location: login.php");
+    exit();
+}
+
+$user_id = $_SESSION['user_id'];
+
+// Initialize variables
+$first_name = $last_name = $username = $bio = $birthdate = $mobile = $email = '';
+$education_level = $college = $city = $country = $experience_years = '';
+$skills = ''; // Initialize skills as an empty string
+$projects = ['name' => '', 'description' => '']; // Initialize projects as an empty array
+
+// Retrieve user data from different tables
+$sql = "SELECT ub.first_name, ub.last_name, ub.username, ub.bio, ub.birthdate, ub.mobile, ub.email, 
+        ue.education_level, ue.college, ue.city, ue.country, ue.experience_years, 
+        up.project_name, up.project_description
+        FROM user_basic_info ub 
+        LEFT JOIN user_education ue ON ub.user_id = ue.user_id
+        LEFT JOIN users_prevproj up ON ub.user_id = up.user_id
+        WHERE ub.user_id = ?";
+$stmt = $conn->prepare($sql);
+$stmt->bind_param("i", $user_id);
+$stmt->execute();
+$result = $stmt->get_result();
+
+$user = null;
+
+if ($result->num_rows > 0) {
+    $user = $result->fetch_assoc();
+}
+
+// Assign user data to variables
+if ($user) {
+    $first_name = htmlspecialchars($user['first_name']);
+    $last_name = htmlspecialchars($user['last_name']);
+    $username = htmlspecialchars($user['username']);
+    $bio = htmlspecialchars($user['bio']);
+    $birthdate = htmlspecialchars($user['birthdate']);
+    $mobile = htmlspecialchars($user['mobile']);
+    $email = htmlspecialchars($user['email']);
+    $education_level = htmlspecialchars($user['education_level']);
+    $college = htmlspecialchars($user['college']);
+    $city = htmlspecialchars($user['city']);
+    $country = htmlspecialchars($user['country']);
+    $experience_years = htmlspecialchars($user['experience_years']);
+    $projects = [
+        'name' => htmlspecialchars($user['project_name']),
+        'description' => htmlspecialchars($user['project_description'])
+    ];
+}
+
+// Fetch skills separately (change skill_name to skill)
+$sql = "SELECT skill FROM user_skills WHERE user_id = ?";
+$stmt = $conn->prepare($sql);
+$stmt->bind_param("i", $user_id);
+$stmt->execute();
+$result = $stmt->get_result();
+
+$userSkills = [];
+while ($row = $result->fetch_assoc()) {
+    if (!empty($row['skill'])) { // Use 'skill' instead of 'skill_name'
+        $userSkills[] = htmlspecialchars($row['skill']);
+    }
+}
+
+// Join skills into a single string for display
+$skills = implode(', ', $userSkills);
+
+// Check if skills are empty and set a message if they are
+if (empty($skills)) {
+    $skills = "No skills available."; // Default message if no skills found
+}
+
+$stmt->close();
+$conn->close();
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User Profile</title>
+  <link rel="stylesheet" href="profile.css">
+</head>
+<body>
+  <header class="header">
+    <img src="logo2.png" alt="Logo" class="logo">
+    <a href="home.php">
+      <button class="Profile">Home</button>
+    </a>
+  </header>
+
+  <nav class="nav">
+    <button class="tab-button" onclick="toggleSection('details-section')">User Details</button>
+    <button class="tab-button" onclick="toggleSection('more-about-section')">More About User</button>
+    <button class="tab-button" onclick="toggleSection('skills-section')">Skills</button>
+    <button class="tab-button" onclick="toggleSection('projects-section')">Previous Projects</button>
+  </nav>
+
+  <!-- User Details -->
+  <div id="details-section" class="section">
+    <h2>User Details</h2>
+    <div id="view-details">
+      <p>First Name: <span id="view-first-name"><?php echo $first_name; ?></span></p>
+      <p>Last Name: <span id="view-last-name"><?php echo $last_name; ?></span></p>
+      <p>Username: <span id="view-username"><?php echo $username; ?></span></p>
+      <p>Bio: <span id="view-bio"><?php echo $bio; ?></span></p>
+      <p>Birthdate: <span id="view-birthdate"><?php echo $birthdate; ?></span></p>
+      <p>Mobile Number: <span id="view-mobile"><?php echo $mobile; ?></span></p>
+      <p>Email ID: <span id="view-email"><?php echo $email; ?></span></p>
+    </div>
+  </div>
+
+  <!-- More About User -->
+  <div id="more-about-section" class="section hidden">
+    <h2>More About User</h2>
+    <div id="view-more-about">
+      <p>Education Level: <span id="view-education-level"><?php echo $education_level; ?></span></p>
+      <p>College: <span id="view-college"><?php echo $college; ?></span></p>
+      <p>City: <span id="view-city"><?php echo $city; ?></span></p>
+      <p>Country: <span id="view-country"><?php echo $country; ?></span></p>
+      <p>Experience: <span id="view-experience"><?php echo $experience_years; ?> years</span></p>
+    </div>
+  </div>
+
+  <!-- Skills Section -->
+  <div id="skills-section" class="section hidden">
+    <h2>Skills</h2>
+    <div id="view-skills">
+        <p>Skills: <span id="view-skills-list"><?php echo $skills; ?></span></p>
+    </div>
+  </div>
+
+  <!-- Projects Section -->
+  <div id="projects-section" class="section hidden">
+    <h2>Previous Projects</h2>
+    <div id="view-projects">
+      <p>Project Name: <span id="view-projects-name"><?php echo $projects['name']; ?></span></p>
+      <p>Project Description: <span id="view-projects-description"><?php echo $projects['description']; ?></span></p>
+    </div>
+  </div>
+
+  <script src="profile.js"></script>
+</body>
+</html>

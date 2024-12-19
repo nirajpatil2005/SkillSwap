@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Post Your Project</title>
+    <link rel="stylesheet" href="post-project.css"> <!-- Link to external CSS file -->
+</head>
+<body>
+<header class="header">
+    <div class="logo">
+        <img src="logo2.png" alt="SkillSwap Logo">
+    </div>
+    <a href="home.php">
+      <button class="Profile">Home</button>
+    </a>
+</header>
+<section class="project-section">
+    <div class="project-container">
+        <div class="project-header">
+             <h2>Post Your Project</h2>
+            <p>Fill out the details about your project below and share it with SkillSwap Community!</p>
+        </div>
+    <form action="post-project.php" method="POST">
+        <label for="project-title">Project Title:</label>
+        <input type="text" id="project-title" name="project-title" required>
+
+        <label for="project-description">Project Description:</label>
+        <textarea id="project-description" name="project-description" rows="5" required></textarea>
+
+        <label for="category">Category:</label>
+        <select id="category" name="category" required>
+            <option value="Software">Software</option>
+            <option value="Hardware">Hardware</option>            
+        </select>
+
+        <label for="skills-required">Skills Required:</label>
+        <input type="text" id="skills-required" name="skills-required" required>
+
+        <label for="deadline">Deadline:</label>
+        <input type="date" id="deadline" name="deadline" required>
+
+        <button type="submit">Post Project</button>
+    </form>
+</section>    
+    <footer>
+        <p>Contact us at: <a href="mailto:team.skillswap@gmail.com">team.skillswap@gmail.com</a></p>
+        <p>&copy; 2024 SkillSwap. All rights reserved.</p>
+    </footer>
+</div>
+
+</body>
+</html>

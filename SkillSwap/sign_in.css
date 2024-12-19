@@ -1,0 +1,252 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+
+.video-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1;
+}
+
+video {
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    object-fit: cover;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    position: relative;
+    z-index: 1;
+}
+
+.logo img {
+    height: 30px;
+    margin-right: 10px;
+}
+
+.logo span {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 85vh;
+    position: relative;
+    z-index: 1;
+}
+
+.signin-container {
+    background-color: #ffffffe6;
+    padding: 45px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    width: 300px;
+    text-align: center;
+    padding-top: 20px;
+}
+
+.signin-container h2 {
+    font-size: 2.5em;
+    margin-bottom: 45px;
+    color: #424242; /* Matching the heading color from the previous style */
+}
+
+.input-container {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.input-container label {
+    display: block;
+    font-size: 0.9em;
+    color: #333333;
+    margin-bottom: 5px;
+}
+
+.input-container input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.signin-button {
+    width: 100%;
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 5px;
+    font-size: 1em;
+    transition: background-color 0.3s;
+}
+
+.signin-button:hover {
+    background-color: #636363;
+}
+
+.signin-container p {
+    margin-top: 20px;
+    font-size: 0.9em;
+    color: #555;
+}
+
+.signin-container a {
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.signin-container a:hover {
+    text-decoration: underline;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+
+.video-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1;
+}
+
+video {
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    object-fit: cover;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    position: relative;
+    z-index: 1;
+}
+
+.logo img {
+    height: 30px;
+    margin-right: 10px;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 85vh;
+    position: relative;
+    z-index: 1;
+}
+
+.signin-container, .reset-password-container {
+    background-color: #ffffffe6;
+    padding: 45px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    width: 300px;
+    text-align: center;
+    padding-top: 20px;
+}
+
+.signin-container h2, .reset-password-container h2 {
+    font-size: 2em;
+    margin-bottom: 45px;
+    color: #424242;
+}
+
+.input-container {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.input-container label {
+    display: block;
+    font-size: 0.9em;
+    color: #333333;
+    margin-bottom: 5px;
+}
+
+.input-container input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.signin-button, .reset-button {
+    width: 100%;
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    font-size: 1em;
+    transition: background-color 0.3s;
+}
+
+.signin-button:hover, .reset-button:hover {
+    background-color: #636363;
+}
+
+.signin-container p, .reset-password-container p {
+    margin-top: 20px;
+    font-size: 0.9em;
+    color: #555;
+}
+
+.signin-container a, .reset-password-container a {
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.signin-container a:hover, .reset-password-container a:hover {
+    text-decoration: underline;
+}

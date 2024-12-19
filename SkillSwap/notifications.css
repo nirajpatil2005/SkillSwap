@@ -1,0 +1,492 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f7f7f7;
+}
+
+/* Header Section */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+    background-color: #4588d1;
+    color: rgb(255, 255, 255);
+}
+
+header .logo img {
+    margin-left: 10px;
+    width: 150px;
+}
+
+.Profile {
+    background-color: #4588d1;
+    color: #fff;
+    padding: 10px 20px;
+    border: 2px solid #f9f9f9ea;
+    margin-right: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+}
+.Profile:hover {
+    background-color: #f1f1f1ee; /* Blue */
+color: #4588d1;
+border: 2px solid #ac1f1f00;
+}
+.notification {
+    background-color: #4588d1;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    margin-right: 10px;
+    position: relative; /* Ensure notification count stays on top */
+    display: inline-block; /* Ensure button does not stretch full width */
+}
+
+.notification i {
+    font-size: 1.2em; /* Adjust icon size */
+}
+
+.notification:hover {
+    color: #6898ba;
+    transform: translateY(-2px);
+
+}
+.notification {
+    position: relative;
+}
+.notification-count {
+    position: absolute;
+    top: -1px;
+    right: -1px;
+    background-color: red;
+    color: white;
+    border-radius: 50%;
+    padding: 4px 8px;
+    font-size: 0.8em;
+}
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 30px;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+/* Modal Container */
+/* Modal Background Overlay */
+.profile-modal {
+    display: none; /* Initially hidden */
+    position: fixed; 
+    z-index: 1000; /* Ensure it's on top */
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; /* Full viewport height */
+    background-color: #00000080; /* Semi-transparent background */
+}
+
+/* Modal Content */
+.profile-modal-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Centers the modal */
+    background-color: rgb(242, 240, 240);
+    padding: 20px;
+    border-radius: 10px;
+    width: 400px; /* Fixed width */
+    box-shadow: 0px 5px 15px #0000004d; /* Slight shadow */
+    animation: fadeIn 0.3s ease-in-out; /* Optional animation for appearance */
+}
+
+/* Close Button */
+.profile-modal .close {
+    color: #333;
+    font-size: 20px;
+    font-weight: bold;
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    cursor: pointer;
+}
+
+/* Modal Content Styling */
+.profile-modal h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: #313131;
+}
+
+.profile-info p {
+    font-size: 16px;
+    margin-bottom: 10px;
+    color: #3d3d3d;
+}
+
+/* Edit Profile Button */
+#editProfileBtn {
+    background-color: #295F98; /* Your blue color */
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    box-shadow: 0px 4px 6px rgba(143, 140, 140, 0.1); /* Added shadow */
+    transition: box-shadow 0.3s ease, background-color 0.3s ease; /* Smooth transition */
+}
+
+#editProfileBtn:hover {
+    background-color: #8e9fb3; /* Darker blue on hover */
+    box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.15); /* Increase shadow on hover */
+}
+
+/* Edit Profile Form */
+#editProfileForm {
+    margin-top: 20px;
+}
+
+#editProfileForm label {
+    font-size: 14px;
+    color: #333;
+}
+
+#editProfileForm input[type="text"],
+#editProfileForm input[type="email"] {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+#editProfileForm button[type="submit"] {
+    background-color: #295F98;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#editProfileForm button[type="submit"]:hover {
+    background-color: #1f4a7c;
+}
+/* Bio Textarea Styling */
+#bio {
+    width: 100%;
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    margin-bottom: 15px;
+}
+
+/* File Upload Styling */
+#cvUpload, #projectUpload {
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+/* Styling for Save Button and Edit Profile button remains the same */
+
+
+/* Optional Fade In Animation */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+
+/* Edit Profile Button */
+#editProfileBtn {
+    background-color: #295F98; /* Your blue color */
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#editProfileBtn:hover {
+    background-color: #1f4a7c; /* Darker blue on hover */
+}
+
+/* Form Styling */
+#editProfileForm {
+    margin-top: 20px;
+}
+
+#editProfileForm label {
+    font-size: 14px;
+    color: #333;
+}
+
+#editProfileForm input[type="text"],
+#editProfileForm input[type="email"] {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+#editProfileForm button[type="submit"] {
+    background-color: #295F98;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#editProfileForm button[type="submit"]:hover {
+    background-color: #1f4a7c;
+}
+
+
+
+/* Main Section */
+/* Main Section */
+.about-section {
+    background-image: url('image.png'); /* Replace with your image path */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 120px;
+    text-align: left;
+    color: #ffffff; /* Ensures text is readable on the background */
+}
+
+.about-box {
+    max-width: 700px;
+
+    background-color: rgba(0, 0, 0, 0.617); /* Semi-transparent white for better readability */
+    padding: 40px;
+    border-radius: 12px;
+    margin-top: 105px;
+    margin-left: 0px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.about-box h2 {
+    color: #4588d1; /* Blue */
+}
+
+.learn-more-btn {
+    display: inline-block;
+    padding: 12px 25px;
+    background-color: #4588d1; /* Darker blue */
+    border: 2px solid #f9f9f900; /* Blue */
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.learn-more-btn:hover {
+    background-color: #4589d100; /* Blue */
+color: white;
+border: 2px solid #f9f9f9;
+    padding: 12px 25px;
+    margin-top: 20px;
+}
+
+
+/* Feature Cards */
+
+.feature-cards {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 50px 20px;
+    
+}
+
+.card {
+    background-color: #4588d1;
+    width: 250px;
+    padding: 20px;
+    margin: 20px;
+    text-align: left;
+    color: #f8f8f8;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card-btn {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px;
+    background-color: #4588d1; /* Darker blue */
+    border: 2px solid #f9f9f9;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 5px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+
+}
+.card-btn:hover {
+    background-color: #ffffff;
+    color: #4588d1;
+    margin-top: 15px;
+    padding: 10px;
+}
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Useful Section */
+.useful-container {
+    background-color: #1d1d1d; /* Lighter beige */
+    padding: 50px;
+    text-align: left;
+}
+.useful-container p{
+    color: #ffffff;
+    padding-right: 400px;
+}
+.useful-container h2 {
+    color: #4588d1;
+}
+.notification {
+    background-color: transparent;
+    border: none;
+    position: relative;
+    cursor: pointer;
+    color: white;
+    font-size: 20px;
+}
+
+.notification-count {
+    background-color: red;
+    color: white;
+    border-radius: 50%;
+    padding: 5px 10px;
+    font-size: 12px;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+/* Notification Section */
+.notification-section {
+    padding: 40px;
+    background-color: #f7f7f7;
+}
+
+.notification-box {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.notification-box h2 {
+    color: #4588d1;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.notification-item {
+    background-color: #f1f1f1;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+}
+
+.notification-item h3 {
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.notification-item p {
+    margin-bottom: 10px;
+    color: #555;
+}
+
+.notification-item button, a.notification-item {
+    background-color: #4588d1;
+    color: white;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+.details-btn{
+    background-color: #4588d1;
+    color: white;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 0.9em;
+    cursor: pointer;
+}
+
+.notification-item button:hover, .notification-item a.details-btn:hover {
+    background-color: #346ba6;
+}
+
+.notification-item button.decline-btn {
+    background-color: #ff4c4c;
+}
+
+.notification-item button.decline-btn:hover {
+    background-color: #e43e3e;
+}
+
+.notification-history {
+    margin-top: 40px;
+    border-top: 1px solid #ddd;
+    padding-top: 20px;
+}
+
+.notification-history h2 {
+    color: #4588d1;
+    margin-bottom: 15px;
+}
+
+.notification-history p {
+    color: #777;
+    margin-bottom: 10px;
+}
+/* Footer Section */
+footer {
+    background-color: #4588d1;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+footer p {
+    margin: 5px;
+}
+
+footer a {
+    color: white;
+    text-decoration: underline;
+}
+
+
+

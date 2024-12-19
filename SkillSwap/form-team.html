@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form a Team | SkillSwap</title>
+    <link rel="stylesheet" href="form-team.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="logo">
+            <img src="logo2.png" alt="SkillSwap Logo">
+        </div>
+        <nav>
+            <ul>
+                <a href="home.php">
+                    <button class="Profile">Home</button>
+                </a>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Section: Form a Team -->
+    <section class="team-form-section">
+        <div class="team-form-container">
+            <h2>Form a Team for Your Project</h2>
+            <form id="teamForm">
+                <!-- Project Title -->
+                <div class="form-group">
+                    <label for="projectTitle">Project Title:</label>
+                    <input type="text" id="projectTitle" name="projectTitle" required>
+                </div>
+
+                <!-- Add Team Members -->
+                <div class="form-group">
+                    <label for="teamMemberEmail">Add Team Members:</label>
+                    <input type="email" id="teamMemberEmail" placeholder="Enter email of teammate">
+                    <button type="button" id="addMemberBtn">Add Member</button>
+                </div>
+
+                <!-- Display Added Team Members -->
+                <ul id="teamList"></ul>
+
+                <!-- Submit Button -->
+                <button type="submit" class="submit-btn">Form Team</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>Contact us at: <a href="mailto:team.skillswap@gmail.com">team.skillswap@gmail.com</a></p>
+        <p>Created by: Atharva Jain | Niraj Patil</p>
+    </footer>
+
+    <script src="form-team.js"></script>
+</body>
+</html>
